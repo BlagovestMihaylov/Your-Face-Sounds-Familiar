@@ -1,64 +1,72 @@
 package com.example.YourFaceSoundsFamiliar.model;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-@DiscriminatorValue(value = "Jury")
-public class Jury extends ActingPerson {
+public class Jury {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
+    private Long id;
+    @Column(nullable = false)
+    private String sceneName;
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
+    private String nickname;
     @Column(nullable = false)
     private int episodeNumber;
 
-    public int getEpisodeNumber() {
-        return episodeNumber;
-    }
-
-    public void setEpisodeNumber(int episodeNumber) {
+    public Jury(String sceneName, String name, String nickname, int episodeNumber)
+    {
+        this.sceneName = sceneName;
+        this.name = name;
+        this.nickname = nickname;
         this.episodeNumber = episodeNumber;
     }
 
-    public Jury() {
-        super();
+    public Jury()
+    {
     }
 
-    public Jury(String sceneName, String name, String nickname) {
-        super(sceneName, name, nickname);
+    public String getSceneName()
+    {
+        return sceneName;
     }
 
-    @Override
-    public String getSceneName() {
-        return super.getSceneName();
+    public void setSceneName(String sceneName)
+    {
+        this.sceneName = sceneName;
     }
 
-    @Override
-    public void setSceneName(String sceneName) {
-        super.setSceneName(sceneName);
+    public String getName()
+    {
+        return name;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public String getNickname()
+    {
+        return nickname;
     }
 
-    @Override
-    public String getNickname() {
-        return super.getNickname();
+    public void setNickname(String nickname)
+    {
+        this.nickname = nickname;
     }
 
-    @Override
-    public void setNickname(String nickname) {
-        super.setNickname(nickname);
+    public int getEpisodeNumber()
+    {
+        return episodeNumber;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public void setEpisodeNumber(int episodeNumber)
+    {
+        this.episodeNumber = episodeNumber;
     }
 }

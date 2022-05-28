@@ -1,14 +1,15 @@
 package com.example.YourFaceSoundsFamiliar.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 public class Participant implements Serializable
 {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false)
+    private long id;
     @Column(nullable = false)
     private String sceneName;
     @Column(nullable = false)

@@ -6,52 +6,51 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Season")
+@RequestMapping("/season")
 public class SeasonController
 {
-    private final SeasonService SeasonService;
+    private final SeasonService seasonService;
 
-    public SeasonController(SeasonService SeasonService)
+    public SeasonController(SeasonService seasonService)
     {
-        this.SeasonService = SeasonService;
+        this.seasonService = seasonService;
     }
 
     @GetMapping("/all")
     public ResponseEntity<List<Season>> getAllSeasons()
     {
-        List<Season> Seasons = SeasonService.findAllSeasons();
+        List<Season> Seasons = seasonService.findAllSeasons();
         return new ResponseEntity<>(Seasons, HttpStatus.OK);
     }
 
     @GetMapping("/find/{number}")
     public ResponseEntity<Season> getAllSeasonsByDate(@PathVariable("number") int number)
     {
-        Season Seasons = SeasonService.findSeasonByNumber(number);
+        Season Seasons = seasonService.findSeasonByNumber(number);
         return new ResponseEntity<>(Seasons, HttpStatus.OK);
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Season> addSeason(@RequestBody Season Season)
+    public ResponseEntity<Season> addSeason(@RequestBody Season season)
     {
-        Season newSeason = SeasonService.addSeason(Season);
+        Season newSeason = seasonService.addSeason(season);
         return new ResponseEntity<>(newSeason, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Season> updateSeason(@RequestBody Season Season)
+    public ResponseEntity<Season> updateSeason(@RequestBody Season season)
     {
-        Season newSeason = SeasonService.updateSeason(Season);
+        Season newSeason = seasonService.updateSeason(season);
         return new ResponseEntity<>(newSeason, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/delete/{number}")
     public ResponseEntity<?> deleteSeason(@PathVariable("number") int number)
     {
-        SeasonService.deleteSeason(number);
+        seasonService.deleteSeason(number);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

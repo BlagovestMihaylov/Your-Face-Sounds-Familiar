@@ -17,4 +17,44 @@ public class Season implements Serializable {
     @Column(nullable = false)
     private int episodeCount;
 
+    public Season(int number, int participantCount, int episodeCount)
+    {
+        this.number = number;
+        this.participantCount = participantCount;
+        this.episodeCount = episodeCount;
+    }
+
+    public Season()
+    {
+    }
+
+    public int getNumber()
+    {
+        return number;
+    }
+
+    public void setNumber(int number)
+    {
+        this.number = number;
+    }
+
+    public int getParticipantCount()
+    {
+        return participantCount;
+    }
+
+    public void setParticipantCount(int participantCount)
+    {
+        this.participantCount = participantCount;
+    }
+
+    public int getEpisodeCount()
+    {
+        return episodeCount;
+    }
+
+    public void setEpisodeCount(int episodeCount)
+    {
+        this.episodeCount = episodeCount;
+    }
 }

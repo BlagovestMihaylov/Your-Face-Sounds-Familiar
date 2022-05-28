@@ -1,61 +1,75 @@
 package com.example.YourFaceSoundsFamiliar.model;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 
 @Entity
-@DiscriminatorValue(value = "Host")
-public class Host extends ActingPerson {
+public class Host
+{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(nullable = false, updatable = false)
+    private Long id;
+    @Column(nullable = false)
+    private String sceneName;
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
+    private String nickname;
     @Column(nullable = false)
     private int seasonNumber;
 
-    public int getSeasonNumber() {
+    public int getSeasonNumber()
+    {
         return seasonNumber;
     }
 
 
-    public void setSeasonNumber(int seasonNumber) {
+    public void setSeasonNumber(int seasonNumber)
+    {
         this.seasonNumber = seasonNumber;
     }
 
-    public Host(String sceneName, String name, String nickname) {
-        super(sceneName, name, nickname);
+    public Host(String sceneName, String name, String nickname, int seasonNumber)
+    {
+        this.sceneName = sceneName;
+        this.name = name;
+        this.nickname = nickname;
+        this.seasonNumber = seasonNumber;
     }
 
-    public Host() {
+    public Host()
+    {
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public String getSceneName()
+    {
+        return sceneName;
     }
 
-    @Override
-    public void setSceneName(String sceneName) {
-        super.setSceneName(sceneName);
+    public void setSceneName(String sceneName)
+    {
+        this.sceneName = sceneName;
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
+    public String getName()
+    {
+        return name;
     }
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
-    @Override
-    public String getNickname() {
-        return super.getNickname();
+    public String getNickname()
+    {
+        return nickname;
     }
 
-    @Override
-    public void setNickname(String nickname) {
-        super.setNickname(nickname);
+    public void setNickname(String nickname)
+    {
+        this.nickname = nickname;
     }
 }

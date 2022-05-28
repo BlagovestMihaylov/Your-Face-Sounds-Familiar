@@ -33,6 +33,13 @@ public class ParticipantController
         return new ResponseEntity<>(participants, HttpStatus.OK);
     }
 
+    @GetMapping("/find/{id}")
+    public ResponseEntity<Participant> getAllParticipantsById(@PathVariable("id") long id)
+    {
+        Participant participants = participantService.findparticipantById(id);
+        return new ResponseEntity<>(participants, HttpStatus.OK);
+    }
+
     @GetMapping("/findSeason/{season}")
     public ResponseEntity<Participant> getAllParticipantsBySeasonNumber(@PathVariable("season") int seasonNumber)
     {
@@ -54,10 +61,10 @@ public class ParticipantController
         return new ResponseEntity<>(newParticipant, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete/{sceneName}")
-    public ResponseEntity<?> deleteParticipant(@PathVariable("sceneName") String sceneName)
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteParticipant(@PathVariable("id") long id)
     {
-        participantService.deleteParticipant(sceneName);
+        participantService.deleteParticipant(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

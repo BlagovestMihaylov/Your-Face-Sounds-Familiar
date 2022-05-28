@@ -35,6 +35,10 @@ public class ParticipantService
         return participantRepo.save(participant);
     }
 
+    public Participant findparticipantById(long id)
+    {
+        return participantRepo.findParticipantById(id);
+    }
     public Participant findParticipantBySceneName(String sceneName)
     {
         return participantRepo.findParticipantBySceneName(sceneName);
@@ -44,9 +48,9 @@ public class ParticipantService
         return participantRepo.findParticipantBySeasonNumber(seasonNumber);
     }
 
-    public void deleteParticipant(String sceneName)
+    public void deleteParticipant(long id)
     {
-        participantRepo.deleteParticipantBySceneName(sceneName);
+        participantRepo.deleteParticipantById(id);
     }
 
 }
