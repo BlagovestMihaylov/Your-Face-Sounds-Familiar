@@ -1,7 +1,13 @@
 package com.example.YourFaceSoundsFamiliar.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 
+
+@Entity
+@DiscriminatorValue(value = "Host")
 public class Host extends ActingPerson {
 
     @Column(nullable = false)

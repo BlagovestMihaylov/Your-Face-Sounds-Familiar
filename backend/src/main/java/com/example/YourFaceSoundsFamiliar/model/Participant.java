@@ -6,19 +6,22 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-public class Participant implements Serializable {
+public class Participant implements Serializable
+{
     @Id
     @Column(nullable = false)
     private String sceneName;
     @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String nickname;
     @Column(nullable = false)
     private String jobTitle;
     @Column(nullable = false)
     private int seasonNumber;
 
-    public Participant(String sceneName, String name, String nickname, String jobTitle, int seasonNumber) {
+    public Participant(String sceneName, String name, String nickname, String jobTitle, int seasonNumber)
+    {
         this.sceneName = sceneName;
         this.name = name;
         this.nickname = nickname;
@@ -26,53 +29,65 @@ public class Participant implements Serializable {
         this.seasonNumber = seasonNumber;
     }
 
-    public Participant() {
+    public Participant()
+    {
 
     }
 
-    public String getSceneName() {
+    public String getSceneName()
+    {
         return sceneName;
     }
 
-    public void setSceneName(String sceneName) {
+    public void setSceneName(String sceneName)
+    {
         this.sceneName = sceneName;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getNickname() {
+    public String getNickname()
+    {
         return nickname;
     }
 
-    public void setNickname(String nickname) {
+    public void setNickname(String nickname)
+    {
         this.nickname = nickname;
     }
 
-    public String getJobTitle() {
+    public String getJobTitle()
+    {
         return jobTitle;
     }
 
-    public void setJobTitle(String jobTitle) {
+    public void setJobTitle(String jobTitle)
+    {
         this.jobTitle = jobTitle;
     }
 
 
-    public int getSeasonNumber() {
+    public int getSeasonNumber()
+    {
         return seasonNumber;
     }
 
-    public void setSeasonNumber(int seasonNumber) {
+    public void setSeasonNumber(int seasonNumber)
+    {
         this.seasonNumber = seasonNumber;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Participant{" + "sceneName='" + sceneName + '\'' + ", name='" + name + '\'' + ", nickname='" + nickname + '\'' + ", jobTitle='" + jobTitle + '\'' + ", seasonNumber=" + seasonNumber + '}';
     }
 }

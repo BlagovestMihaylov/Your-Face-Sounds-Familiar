@@ -1,9 +1,11 @@
 package com.example.YourFaceSoundsFamiliar.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue(value = "Jury")
 public class Jury extends ActingPerson {
 
     @Column(nullable = false)
