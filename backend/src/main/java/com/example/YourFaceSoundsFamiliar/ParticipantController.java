@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//@CrossOrigin(origins = "http:localhost4200")
 @RestController
 @RequestMapping("/participant")
 public class ParticipantController
@@ -36,7 +36,7 @@ public class ParticipantController
     @GetMapping("/find/{id}")
     public ResponseEntity<Participant> getAllParticipantsById(@PathVariable("id") long id)
     {
-        Participant participants = participantService.findparticipantById(id);
+        Participant participants = participantService.findParticipantById(id);
         return new ResponseEntity<>(participants, HttpStatus.OK);
     }
 

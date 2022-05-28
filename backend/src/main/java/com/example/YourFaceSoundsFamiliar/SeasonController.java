@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http:localhost4200")
 @RestController
 @RequestMapping("/season")
 public class SeasonController

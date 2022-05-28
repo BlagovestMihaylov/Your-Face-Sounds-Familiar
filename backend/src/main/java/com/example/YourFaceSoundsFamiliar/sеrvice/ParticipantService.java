@@ -35,7 +35,7 @@ public class ParticipantService
         return participantRepo.save(participant);
     }
 
-    public Participant findparticipantById(long id)
+    public Participant findParticipantById(long id)
     {
         return participantRepo.findParticipantById(id);
     }

@@ -12,7 +12,7 @@ import java.util.Date;
 public class Role implements Serializable {
     @Id
     @Column(nullable = false)
-    private String participantSceneName;
+    private long participantId;
     @Id
     @Column(nullable = false)
     private Date episodeDate;
@@ -26,62 +26,62 @@ public class Role implements Serializable {
     public Role() {
     }
 
-    public Role(String participantSceneName, Date episodeDate, String title, String originalPerformer, int points) {
-        this.participantSceneName = participantSceneName;
+    public Role(long participantId, Date episodeDate, String title, String originalPerformer, int points)
+    {
+        this.participantId = participantId;
         this.episodeDate = episodeDate;
         this.title = title;
         this.originalPerformer = originalPerformer;
         this.points = points;
     }
 
-    public String getParticipantSceneName() {
-        return participantSceneName;
+    public long getParticipantId()
+    {
+        return participantId;
     }
 
-    public void setParticipantSceneName(String participantSceneName) {
-        this.participantSceneName = participantSceneName;
+    public void setParticipantId(long participantId)
+    {
+        this.participantId = participantId;
     }
 
-    public Date getEpisodeDate() {
+    public Date getEpisodeDate()
+    {
         return episodeDate;
     }
 
-    public void setEpisodeDate(Date episodeDate) {
+    public void setEpisodeDate(Date episodeDate)
+    {
         this.episodeDate = episodeDate;
     }
 
-    public String getTitle() {
+    public String getTitle()
+    {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title)
+    {
         this.title = title;
     }
 
-    public String getOriginalPerformer() {
+    public String getOriginalPerformer()
+    {
         return originalPerformer;
     }
 
-    public void setOriginalPerformer(String originalPerformer) {
+    public void setOriginalPerformer(String originalPerformer)
+    {
         this.originalPerformer = originalPerformer;
     }
 
-    public int getPoints() {
+    public int getPoints()
+    {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(int points)
+    {
         this.points = points;
-    }
-
-    @Override
-    public String toString() {
-        return "Role{" +
-                "participantSceneName='" + participantSceneName + '\'' +
-                ", episodeDate=" + episodeDate +
-                ", title='" + title + '\'' +
-                ", originalPerformer='" + originalPerformer + '\'' +
-                ", points=" + points +
-                '}';
     }
 }
