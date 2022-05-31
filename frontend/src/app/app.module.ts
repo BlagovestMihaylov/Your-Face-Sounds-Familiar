@@ -11,11 +11,29 @@ import { SeasonComponent } from './season/season.component';
 import { HostComponent } from './host/host.component';
 import { JuryComponent } from './jury/jury.component';
 import { RoleComponent } from './role/role.component';
+import { EpisodeService } from './episode.service';
+import { SeasonService } from './season.service';
 
 @NgModule({
-  declarations: [AppComponent, ParticipantComponent, EpisodeComponent, SeasonComponent, HostComponent, JuryComponent, RoleComponent],
+  declarations: [
+    AppComponent,
+    ParticipantComponent,
+    EpisodeComponent,
+    SeasonComponent,
+    HostComponent,
+    JuryComponent,
+    RoleComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [ParticipantService],
+  providers: [
+    ParticipantService,
+    EpisodeService,
+    SeasonService,
+    SeasonComponent,
+    HostComponent,
+    JuryComponent,
+    RoleComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

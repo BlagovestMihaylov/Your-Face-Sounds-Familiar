@@ -16,19 +16,19 @@ export class ParticipantService {
   }
   public addParticipants(participant: Participant): Observable<Participant> {
     return this.Http.post<Participant>(
-      `${this.apiServerUrl}/particapnt/add`,
+      `${this.apiServerUrl}/particpant/add`,
       participant
     );
   }
   public updateParticipants(participant: Participant): Observable<Participant> {
     return this.Http.put<Participant>(
-      `${this.apiServerUrl}/particapnt/update`,
+      `${this.apiServerUrl}/particpant/update`,
       participant
     );
   }
   public deleteParticipants(participantId: number): Observable<void> {
     return this.Http.delete<void>(
-      `${this.apiServerUrl}/particapnt/delete/${participantId}`
+      `${this.apiServerUrl}/particpant/delete/${participantId}`
     );
   }
 }
