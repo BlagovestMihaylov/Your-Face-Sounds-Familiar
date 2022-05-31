@@ -67,6 +67,14 @@ ng serve
 #### `7.` отваряте браузър на следния линк [localhost:4200](localhost:4200)
 
 #### След като приложението вече работи може използвате Postman да симулирате заявки до базата данни
-###### Postman се използва, тък като клиентската част не е завършена (бутоните не работят)
+###### Postman се използва, тъй като клиентската част не е завършена (бутоните не работят)
 
 #### Образец за въвеждане на данни 
+![alt text](https://raw.githubusercontent.com/BlagovestMihaylov/Your-Face-Sounds-Familiar/master/images/rachkovPostRequest.png)
+###### въвеждане на водещ
+![alt text](https://raw.githubusercontent.com/BlagovestMihaylov/Your-Face-Sounds-Familiar/master/images/bateMilkoPostRequest.png)
+###### въвеждане на роля
+
+
+
+# Проектът не е завършен, има още много неща за дооправяне по него!
