@@ -23,7 +23,8 @@
 
 
 ## *TO-DO*
-#### Пооправяне на UI, работещи бутони, филтри за данните
+#### Пооправяне на UI, работещи бутони (add, show, remove, update), филтри за данните 
+и може би най-важното - хубав дизайн на сайта 
 
 ## Инсталиране и тестване
 ### Необходими инструменти
@@ -75,6 +76,8 @@ ng serve
 ![alt text](https://raw.githubusercontent.com/BlagovestMihaylov/Your-Face-Sounds-Familiar/master/images/bateMilkoPostRequest.png)
 ###### въвеждане на роля
 
-
+#### Примерни изходни данни
+![alt text](https://raw.githubusercontent.com/BlagovestMihaylov/Your-Face-Sounds-Familiar/master/images/hostListExample.png)
+![alt text](https://raw.githubusercontent.com/BlagovestMihaylov/Your-Face-Sounds-Familiar/master/images/roleListExample.png)
 
 # Проектът не е завършен, има още много неща за дооправяне по него!
